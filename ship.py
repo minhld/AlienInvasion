@@ -17,11 +17,20 @@ class Ship:
 
         # Movement flag; start with a ship that's not moving.
         self.moving_right = False
+        self.moving_left = False
+        self.moving_up = False
+        self.moving_down = False
 
     def update(self):
         """Update the ship's position based on the movement flag."""
         if self.moving_right:
             self.rect.x += 2
+        if self.moving_left:
+            self.rect.x -= 2
+        if self.moving_up:
+            self.rect.y -= 2
+        if self.moving_down:
+            self.rect.y += 2
 
 
     def blit_me(self):
