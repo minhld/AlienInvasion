@@ -20,17 +20,18 @@ class Ship:
         self.moving_left = False
         self.moving_up = False
         self.moving_down = False
+        self.speed = 1.5
 
     def update(self):
         """Update the ship's position based on the movement flag."""
         if self.moving_right:
-            self.rect.x += 2
+            self.rect.x += self.speed
         if self.moving_left:
-            self.rect.x -= 2
+            self.rect.x -= self.speed
         if self.moving_up:
-            self.rect.y -= 2
+            self.rect.y -= self.speed
         if self.moving_down:
-            self.rect.y += 2
+            self.rect.y += self.speed
 
 
     def blit_me(self):
